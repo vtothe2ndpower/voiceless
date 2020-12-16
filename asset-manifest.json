@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/voiceless/static/css/main.6d6ca13b.chunk.css",
+    "main.js": "/voiceless/static/js/main.8d6cf2ce.chunk.js",
+    "main.js.map": "/voiceless/static/js/main.8d6cf2ce.chunk.js.map",
+    "runtime-main.js": "/voiceless/static/js/runtime-main.aed3f8c0.js",
+    "runtime-main.js.map": "/voiceless/static/js/runtime-main.aed3f8c0.js.map",
+    "static/js/2.685365d9.chunk.js": "/voiceless/static/js/2.685365d9.chunk.js",
+    "static/js/2.685365d9.chunk.js.map": "/voiceless/static/js/2.685365d9.chunk.js.map",
+    "index.html": "/voiceless/index.html",
+    "static/css/main.6d6ca13b.chunk.css.map": "/voiceless/static/css/main.6d6ca13b.chunk.css.map",
+    "static/js/2.685365d9.chunk.js.LICENSE.txt": "/voiceless/static/js/2.685365d9.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.aed3f8c0.js",
+    "static/js/2.685365d9.chunk.js",
+    "static/css/main.6d6ca13b.chunk.css",
+    "static/js/main.8d6cf2ce.chunk.js"
+  ]
+}
