@@ -1,13 +1,12 @@
 import React, { Component } from 'react';
-import Statement from './Statement';
+import StatementForm from './StatementForm';
+import StatementItem from './StatementItem';
 
-class Form extends Component {
+class Statement extends Component {
 	constructor(props) {
 		super(props);
 
 		this.state = {
-			statement: '',
-			imgSrc: '',
 			entries: [
 				{
 					statement: 'I am hungry',
@@ -31,25 +30,14 @@ class Form extends Component {
 		};
 	}
 
-	handleSubmit = (e) => {
-		e.preventDefault();
-
-		const { statement, imgSrc } = this.state;
-
-		this.setState((curState) => {
-			let newArr = [ ...curState.entries, { statement, imgSrc } ];
-			return { entries: newArr };
-		});
-
-		this.setState({ statement: '', imgSrc: '' });
-	};
+	addItem = (item) => {
+		this.setState((curState) => ({
+			entries: [...curState.entries, item]
+		}));
+	}
 
 	handleClick = (e) => {
 		this.getSpeech(e.target.alt);
-	};
-
-	handleChange = (e) => {
-		this.setState({ [e.target.name]: e.target.value });
 	};
 
 	getSpeech = (text) => {
@@ -60,38 +48,20 @@ class Form extends Component {
 	render() {
 		const { entries } = this.state;
 		return (
-			<div className="form-body">
-				<form onSubmit={this.handleSubmit}>
-					<input
-						type="text"
-						name="statement"
-						value={this.state.statement}
-						onChange={this.handleChange}
-						placeholder="Statement"
-					/>
-					<input
-						type="text"
-						name="imgSrc"
-						value={this.state.imgSrc}
-						onChange={this.handleChange}
-						placeholder="Image source"
-					/>
-					<button type="submit">Submit</button>
-				</form>
+			<div>
+				<StatementForm addItem={this.addItem} /> 
 				{entries.slice(0).reverse().map((item, index) => {
-					return (
-						<Statement
+						return (<StatementItem
 							key={index}
 							statement={item.statement}
 							imgSrc={item.imgSrc}
 							onClick={this.handleClick}
-						/>
-					);
+						/>);
 				})}
 			</div>
-		);
+			);
 	}
 }
 
-export default Form;
-// Make labels for forms
+export default Statement;
+// Add an ease-in on new additions?

@@ -1,12 +1,12 @@
 import Header from './components/Header';
-import Form from './components/Form';
+import StatementContainer from './components/StatementContainer';
 import './App.css';
 
 function App() {
 	return (
 		<div>
 			<Header />
-			<Form />
+			<StatementContainer />
 		</div>
 	);
 }
